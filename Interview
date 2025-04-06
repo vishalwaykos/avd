@@ -1,0 +1,1455 @@
+INTERVIEW PREPARATION :
+============================================================================================================================================================================================
+SQL QUESTION : 
+============================================================================================================================================================================================
+
+What DBMS ?
+-> It  is a software package that is used to perform data manipulation.
+
+What is RDBMS ?
+->
+
+What are object and fields in sql?
+-> Object refers to tables and fields refers to columns.
+
+What is subquery? What are the types of subquery?
+->
+
+What are constraints and its type?
+->
+
+
+
+
+
+
+
+
+
+Define default,null key, Unique ,primary key constraints?
+
+What is th difference between primary key and unique key?
+->
+
+What is foreign key ? Whar are its use cases?
+->
+It tells the how the table is related is to the other tables.
+
+What are JOINS in SQL?
+-> It is a clause which is use to retribe the data from two or more tables.
+
+What are the types of join in sql?
+->
+inner join , left join , right join and full outer join.
+
+What is the difference between the joins?
+
+What is Schema?
+->
+It is a logical collection of elememts such as tables , stored prpocedure , indexes, functions and triggers.
+
+What is operators?
+->
+
+WHat is the difference between union and union all?
+->
+Union wil not include any duplicate records while union all will have duplicate records.
+Union all is faster than union because union all dosesnt need to procees the data while in union it processed the data removes the duplicates .
+
+What is condition in SQL?
+
+
+
+We have two tables where table  is having columns and table to have  columns with same datatypes so can you perform union operations?
+-> No we can nnot beacuase :
+Column should be same from both the tables 
+Column name shoud be same
+Datatype should be same.
+
+What is manipulation function?
+->
+Concat() : Use to join to or more strings.
+substring() : to extract any part of the string 
+replace() : It is use to replace any character or any occurance.
+ltrim() : it is use to remove white spaces from left side
+rtrim() : it is use to remove white spaces from right side
+
+What is stored procedure? WHat is the syntax fot it?
+->
+It is set of sql statements which executes line by line or one by one.
+Syntax :
+Create procedure <name>
+@empid int
+as
+begin
+-statements--
+-statements--
+-statements--
+End
+
+How you execute the stored procedure ?
+-> 
+TSQL -> execute <store procedure name> @empid =1234
+MySQL -> call <stored procedure name> @empid =1234
+
+What do you understand by function?
+-> 
+It is use for performing calculations, transformations etc?
+
+What is the difference between the stored procedure and functions?
+->
+In function we can not use DML commands i,e we can not use the function for data manipulation.
+Function always returns some value it will never return null but stored procedure can return both.
+
+What is the use of like operator?
+->
+It is use for pattern matching to retrive the data.
+
+You have a table with column name as emp_name with names akshay , sumit , Akash , Shubham. So retrive th name ending with m?
+-> 
+Select * from emp_table where emp_name like '%m'
+
+What is the difference between th eprimary key and unique key?
+->
+
+What is execution order in Sal?
+->
+from
+join
+on
+where
+groupby
+having
+distinct
+select
+order by
+limit
+
+How many outcomes will be there using inner , left , outer , joins are in the following tablle
+There are two tables t1 abd t2
+T1 T2
+1  1
+1  2
+2  4
+3
+4
+1
+2
+-> 
+inner join - 6
+left join - 7 (inner + left)
+right join - 6 (inner + right)
+full outer join -7 (inner + left + right)
+
+How many outcomes will be there using inner , left , outer , joins are in the following tablle
+There are two tables t1 abd t2
+T1 T2
+1  1
+1  2
+2  4
+3 null
+4
+1
+2
+null
+null
+->
+inner join - 6
+left join - 9 (inner + left)
+right join - 7 (inner + right)
+full outer join -10 (inner + left + right)
+
+How many outcomes will be there using inner , left , outer , joins are in the following tablle
+There are two tables emp abd dpt
+emp_id dept_id emp_name
+
+1	2	qqq4
+2	1	aaa
+3	3	qqqq
+4	null	www
+
+dept_id  dept_name
+1	IT
+2	Ops
+null
+->
+inner join - 2
+left join - 3 (inner + left)
+right join - 3 (inner + right)
+full outer join - 4 (inner + left + right)
+
+What is DDL command ?
+-> 
+It stands for Data Defination Language
+It consists of CREATE ,ALTER ,TRUNCATE, DROP
+
+What is DML command ?
+-> 
+It stands for Data Manupulation Language
+It consists of INSERT , DELETE , UPDATE
+
+WHat is the difference between the DDL and DML command ?
+->
+
+What is the difference between delete and truncate?
+->
+Delete is done on some condtions while in truncae we dont need any condition.
+Rollback is not done after truncating the table while in Delete we can rollup the data.
+
+What is th edifference between tjje drop and truncate ?
+->Truncate deletes all the the data from the table where table structure will be present as it is.
+Drop dlete the records and structure of the table.
+
+What is the difference between the where clause and having clause ?
+->
+
+How to duplicates using having clause ?
+
+What is Normalisation ?
+->
+It is the process to eliminate the data redundancy and enhance data intrigity.
+
+What do you mean by data redudnacy ?
+->
+It is duplicy of the data where noormailsation handels the data.
+
+What is data intrigity ?
+->
+It ensures the accuracy , consistency , and preventing the unauthorized access.
+
+What are the different forms of normalization?
+->
+
+What is indexing ? Types of index?
+->
+It is a database objects created on one or more table
+Types of indexex:
+1.Unique index :
+2.Clustered Index :
+It is arranging of the data physically form.
+3.Non-Clustered Index :
+
+What are fact and dimension table/
+->
+The columns which have descriptive information on the column where we can not perform calulations.
+What is fact column?
+Te column which have the data where we can perform calculations.
+
+What is fact table?
+-> A table which contains fact column and a foreign key is termed as fact table.
+
+What is fact table?
+-> A table which contains dimension column and a primary key is termed as dimension table.
+
+What are the types of schema?
+->
+1.star schema : All the dimensions tables are connected to a single fact table.
+2.Snowflake schema : Atlest one dimension table is not connected to a fact table.
+3.Galaxy schema : It is the combination of two or more star schema.
+
+What is use of coalesce?
+->
+It is use to handle the  null records.
+
+What is th euse of coalesce in spark?
+->
+It is use to handle the partirions in spark.
+
+What do you understand by views and what are its type?
+->
+It is a logicall table which is use to store th eresult of the query.
+It is created onn the top of the tables.
+Type sof Views:
+1.Simple View : Views created on a single table is termed as simple view. Here we can use DML commands
+syntax : create view <name> as <query>
+
+2.Read Only View : Here We can not use DML commands thats why it is use mostly.
+
+3.Complex View : Here Views are created on the multiple tables.
+
+4.Materilized View: It is physical view if any changes in base table will not reflect here
+create materialized view <name> as <query>
+
+What are th etypes of data model?
+->
+1.Relational Data Model : Data stored in the form of tables.
+2.Dimensional Data Model : Data stored in the form of fact and dimension tables.
+3.Entity-Relationship Data Model : It shows th erelationship between the data.
+
+What are windows function ?
+-> It is use to calculate the values on the basis of columns.
+
+What are the types of windows function ?
+->
+1.Rank() : It keeps the value whenever the tie or repeatition occurs.
+2.Dense_rank() : It does not skip the values whenever the repeatition occurs.
+3.Row_number() : It is sequence given to the rows.
+
+salary_rnk  rank   d_rnk   row_num
+1000         1     1	    1	
+1000         1     1        2
+2000         3     2        3
+3000         4     3        4
+
+What is the difference between the rank, dense_rank, row_number?
+
+What is CTE (Common Tablle Expression) and its syntax for multiple tables?
+->
+It is temperory result set which we can refrence with the select , update , insert
+syntax
+
+with <cte1 name>(
+Select * from employees),
+with <cte2> as(
+select * from department)
+select * from cte1 join cte2
+
+
+How to find duplicates from the table employee 
+emp_id emp_name emp_salary
+->
+Select emp_id , emp_name , emp_salary
+from employee group by emp_id , emp_name , emp_salary having count(*) >1;
+
+
+How to delete duplicates in oracle?(using rowid)
+->
+
+How to delete duplicates in Mysql?
+-> with deleteduplicates as (
+select *,
+row_number()over(partition by empid,emp_name,emp_salary order by emp_id)m
+from employees)
+delete from employees
+where emp_id in
+(select from deleteduplicates where m>1)
+
+
+Write a query to extract top 5 salarys of employees?
+->
+select salary from employees order by salary desc limit 5;
+
+Write a query to find number of orders per product?
+->
+select prod_id ,count(*) order_count from product group by product_id;
+
+Write a query to find the third highest salary?
+->
+select * 
+from
+(select
+salary,
+dense_rank()over(order by salary desc) mk
+from employees)
+where rnk =3
+
+Write a query to find the third highest salary without window function?
+->
+select salary from employees order by salary desc limit 1 offset 2;
+
+Write a query to find the third highest salary department wise?
+->
+select * 
+from
+(select
+salary,
+dense_rank()over(partition by department_id order by salary desc) mk
+from employees)
+where rnk =3
+
+Write a query to find the third highest salary department wise without using window function?
+->
+
+Write a query to find th first and last record from the table?
+->
+select emp_id from employees order by emp_id limit 1
+union
+select emp_id from employees order by emp_id desc limit 1
+
+Write a query to find the employees who has joined the company more than 5 years?
+->
+select * from employees where join_date <= dateadd(year,-5.getdagte())
+
+Find the employees who does not have subordinates?
+->
+select emp_id from emoloyees where emp_id not in(
+Select emp_id from employees where manager_id is null)
+
+How to  find the table is empty or not ?
+->
+select
+case when exits(select 1 from employees) then 'Not Empty'
+else 'Empty'
+end as <column>
+from employees
+
+Write a query to find th eemployee salary is multiple of 10000
+->
+select * from employees where salary % 10000 = 0
+OR
+Select * from employees where mod(salary,10000) =0
+
+Write a query to fetching who have same salary ?
+->
+Select * from employees where salary is(
+select salary from employees group by salary having count(*) >1)
+
+Write a query to find the manager and employee who has joined on the same date and year?
+->
+select * from employees e join employees m
+on e.manager_id = m.employee_id
+where
+date(m.join_date) = day(e.join_date) and year(m.join_date) = year(e.join_date)
+
+Write a query to write first 50% from the table?
+->
+Select * from employees limit (select count(*)/2 from employees)
+OR
+
+Select * from employees 
+minus
+Select * from employees limit (select count(*)/2 from employees)
+
+Write a query to find to tal number of employees hired before him or her for each employee?
+->
+select emp_id,emp_name, count(*) from employees e1 join employees e2
+on e2.hiredate < e1.hiredate
+group by emp1_id,emp_name
+
+Write a query to find th emanager of th eemployee?
+-> 
+Select
+from employees e 
+join employees m
+on e.manager_id = m.emp_id
+
+Write a query to update country column  in table 2 from table1?
+->
+Update table2 set table2.country = table1.country from table1 join table2
+on table1.country_id = table2.country_id
+
+Write a query to find the number of matches played and no of wins and loss of the teams.
+team1 team2 result
+Ind	Aus	Ind
+Ind	Sri 	Sri
+SA 	Ind 	Ind
+Ind	Pak 	Ind
+->
+select team.count(*)
+sum(case when result = team then 1 else 0) as won
+sum(case when result!= team then 1 else 0) as loss
+sum(case when result is null then 1 else) as tie
+(
+select team1 as team from matches
+union all
+select team2 as team from match)
+group by team
+
+Write  a query to find total marks according to gender
+gender 	marks
+male    100
+boy     80
+men     90
+girl    80
+female  90
+women   100
+->
+select new_gender, sum(marks)(
+select marks,
+case when gender in('men','male','boy') then 'M' else 'F' end as new_gender
+from student) group by new_gender
+
+
+Write a query to find the list of employees with same salary?
+->
+select * from employee e1
+join employee e2 on e1.salary = e2.salary and
+e1.emp_id!= e2.emp_id
+
+Write a query to get this output ?
+input      Output
+red        red-yellow
+yellow     green-yellow
+green      green-red
+->
+select concat(c1.colour,'-',c2.colour) as combination from colours c1 join c2
+on c1.colour < c2.colour
+
+Write a query find cumulative sum of sales till date?
+sales cumulative_sum
+100	100
+200	300
+300	600
+100	700
+200	900
+->
+select group_id, sum(sales)over(partition by product id order by sales)as
+cumulation from product
+
+Write a query to display employees in age group such as '20-30','40-50'
+->
+Select 
+case when age between 20 and 30 then '20-30'
+     when age  between 31 and 40 then '31-40'
+else '50'
+end as age_group
+from
+age
+
+Write a query to find a employe name with same first_name?
+->
+select emp_id from from employees where first_name in(
+select first_name from employees)
+
+
+============================================================================================================================================================================================
+PYTHON QUESTION : 
+============================================================================================================================================================================================
+
+what are data type ?
+>> numeric 
+2. sequence 
+3.boolen 
+4.binary
+
+Q 2) what is list ?
+>> has the elements of diff datatype
+  it is mutable (we can modify list )
+  
+
+Q 3) what is tuple?
+ >> it is immutable 
+  it is faster then list 
+
+Q 3) what is Array ?
+>> it contain element of same datatype 
+
+
+Q4 ) what is main operation we can perform in list ?.
+>> indexing :- retriving the element by its position number 
+  slicing :- retrieving the range of element 
+  repeation :- to repeat the string or seq - list 
+
+Q 5 )  what is dictionary and set ?
+>>   Dict :- it is unorderd collection of key value pairs in which key should be unique and immutable .. it is represented by {}
+   set :- it is unorderd collection of unique element    set()
+
+Q 6 ) diff btn set and  frozonset ?..
+>>> set :- it is mutable 
+    frozone set  :- it is immutable 
+   
+Q 7 ) how to error handling in python ?
+ >>> we use try -except block for error handling 
+  - try block 
+           this block contains the code in which we may get exp 
+  - except block 
+               this block used to handle the exp
+
+  -else block 
+           this block executes when no exp occurs 
+
+
+Q 8 ) for loop 
+>> it is used to iterate on collection datatype 
+
+
+
+
+Q 9 ) while loop :- 
+>> it is also iteration but it will execute the condition becomes false 
+
+
+Q 10 )  what is function ?
+>> it is set of statements that perform a  task  or action 
+  - it is execute only when it is called 
+
+type of fun :- 
+            parameterized fun :- 
+
+
+
+non- parameterized fun .
+
+
+
+Q 11) what are arguments ?
+>> values pass to the parameters 
+
+Q 12 ) what is formal arguments ?
+>> parameter given while creating the function called as formal arg .
+
+Q 13 ) what are the actual arguments ?
+>> values passed to the parameters 
+
+
+
+Q 14) how to take result of function outside of it ?
+>> it is using the return statement .
+ - used to return the result of function outside of  the function ..
+
+
+Q 15 ) what is generator in python ?
+>> generator is function  that allows to yield one value at a time using yield statement ..
+
+Q 16 ) what is decorator ?.
+>> it is function which modify or extend the behavior of another function without changing of the source code ..
+
+Q 17 ) what is module in python ? 
+>>> it is file in python which contain variable function and classes which can be use again and again ...
+
+Q 18 ) what is package in python ?
+>>>  it is directory containing may modules 
+ -- __inint__.py  it tells to pvm to consider this dict as a package 
+
+
+Q 19 ) wahat is library ?
+>> collection of packages 
+
+
+
+
+Q 20 ) what is lambda function ?
+>> A lambda function in Python is an anonymous, single-line function that can have multiple arguments but only one expression. It is defined using the lambda keyword and is often used for short, throwaway functions.
+
+What is library ?
+-> It is the collection of the pacakage.
+
+What is lambda Function ?
+-> It is an anonymous function i.e a function without name and it is use to write compact code.
+Syntax :
+lambda X: logic
+
+What is the difference between the deep copy and shallow copy ?
+-> Deep Copy :
+-It is created using copy method
+-Any changes in original array will not ne reflected in new array.
+
+Shallow Copy : 
+-It is created using view method
+-Any changes in original array will be reflected in new array and vice versa.
+
+What are the concept of OOPS ?
+-> 
+
+Is python a OOPS language? If yes why?
+-> Yes..becase it follows encapsulation , classes and objects , inheritance and polymorphism.
+
+What is class and object ?
+->
+Class : It can be defined as the it the blueprint of the object.
+Object : Instance of a class is called as objects.
+
+What is constructor in python ?
+-> This is the method which is used to initialize the parameters further which are used to create the objects.
+syntax :
+__int__() : this is constructor
+
+What is encapsulation ?
+-> It restricts the direct access to objects , data and methods.
+
+What is abstraction ?
+-> 
+
+What is name mangling ?
+-> It is use to break the abstraction by modifying th evariable name.
+
+What is inheritance ?
+-> Inheritance cann be defined as creating a new class from th existing class. Here new class is called as derived class or sub class and existing class is called as base class or super class. It is the most important property of OOPS 
+
+What are types of inheritance ?
+-> Types :
+1.Single Inheritance : Deriving th ebase class using single class
+2.Multiple Inheritance : Deriving a class using two or more classes 
+
+What is polymorphism ?
+->
+
+What uis method overloading ?
+-> When same method perform different task is called as method overloading.
+
+What is operator overloading ?
+-> When same operator performs different operations is called as operator overloading.
+
+WHat is method overloading ?
+-> Writing same method in sub class whose result will overwrite the super class result.
+
+Which python library do you know or you have worked on?
+-> pandas : It is a library use for data manupulation and for data analysis
+numpy : It is a library use for calculation purpose.
+matrix :
+request : It is use for making stdp request.
+
+How to load the data using pandas from files?
+->
+For csv : pd.read_csv('path')
+for excel : pd.read_excel('path',sheet_names = <name>)
+for txt : pd.read_table('path',delmn_whitespace = True)
+
+WHat is the difference between the pandas dataframe and spark dataframe ?
+->
+Pandas dataframe :
+-Pandas is a library it dosent have its own compute.
+-Pandas is use for small datasets
+
+Spark Dataframe :
+-Spark has its own computing structure.
+-Spark is use for processing of the big data.
+
+Write a program to get the factorial of a number ?
+if input = 5
+then output = 5*4*3*2*1 = 120
+->
+n = int(input('Enter a number : '))
+f = 1
+for i in range(1,n+1):
+	f=f*i
+print(f)
+
+Write a program to get prime numbers?
+-> The number which is dividible by 1 and itself
+
+n = int(input('Enter a number : '))
+a= 0 #flag
+for i in range(2,n):
+	if n%i==0:
+		print('It is not a prime number')
+		a= 1
+if a == 0:
+	print('It is prime number')
+
+Write a program to get Fibonacci series?
+0,1,1,2,3,5,8,13
+->
+n = int(input('Enter a number : '))
+a = 0
+b = 1
+c = 0
+print(a)
+print(b)
+while c<=n :
+	c = a+b
+	a = b 
+	b = c
+print(c)
+
+Write a program to palindrome string ?
+input : ramram
+output : ramram is palindrome string
+->
+
+str1 = str(input('Enter a string :'))
+str2 = ''
+for i in str1:
+	str2 = i+str2
+if str1 == str2:
+	print('It is palindrome string')
+else :
+	print('It is not a palindrome string')
+
+Write a program to swap between two numbers ?
+->
+x = 24
+y = 25
+x,y = y,x
+
+Write a program to count a number of alphabets in a list and give output in a dictionary.
+input = ['a','b','c','d','a']
+output = {'a':2,'b':1,'c':1,'d':1,'a':1}
+->
+lst = ['a','b','c','d','a']
+dict = {}
+for i in lst :
+	if i not i dict:
+		dict[i] = 1
+	else :
+		dict[i] = dict[i]+1
+print(dict)
+
+
+Write a program to find nos in list ?
+->
+lst = [2,5,6,8,10]
+for i in range(1,lst[-1]+1):
+	if i in lst:
+		print('Nos is present')
+
+
+
+============================================================================================================================================================================================
+SPARK QUESTION : 
+============================================================================================================================================================================================
+
+What is spark..?
+-> It is a bigdata proccessing compute infrastructure. It processes dat in memory and it supports 
+parallel processing of data. It internally optimizes the query.
+
+What is Spark architecture...?
+-> Driver program
+ cluster manager
+ worker node
+
+What is Driver program?
+-> It is a program created by user
+ It creates sparksContext
+ 
+What is Cluster manager?
+-> It calculates the resources required to process the job and allocates the availabe resources
+ Types:----
+ -standalone : sparks built in cluster
+ -apache mesos : general purpose
+ -hadoop or yarn : resource layer is hadoop 
+ -kubernetes : here we use kubernetes resources
+
+What is Worker mode?
+-> Execution are launched on the work node for processing the job, it is reponsible for 
+communicating with driver program and executing the code
+
+What is the difference between sparkContext and sparkSession....?
+-> sparkContext - It is used to create only RDDs
+ sparkSession - It is combination of sqlContext, sparkContext, hiveContext, streamContext
+
+Whar are the Types of clusters in spark....?
+-> Types of clusters : 
+-Interactive or all purpose clusters
+-job clustes
+-instance pool clusters
+
+What is the difference between Interactive cluster and Job cluster....?
+-> 
+Interactive cluster:
+-Here we define the configuration of the compute
+ 
+Job cluster:
+-It is created when the job is being processed and terminated when the processing of job is 
+completed
+
+Instance pool cluster:
+-It is pool cluster
+
+Explain Spark Job Execution Flow / Work flow?
+-> Whenever the spark job is submitted to driver program, stages and tasks are created. These stages 
+and tasks are send to the cluster manager. Cluster amanager calculates the resources and 
+allocates resources required for processing. And launches the executors on worker nodes. Here in 
+worker nodes tasks and stages are processed parallely and this result is given to the driver node.
+
+What is transfromation...?
+-> Transformation: Operaton perfomed on RDD to get a new RDD
+ RDD1 --> Transformation1 creates ---> RDD2 and so on.
+
+What are the types of transformations and difference...?
+-> 
+Wide transformation : Shuffling of data will take place amoung partitions 
+Ex. Joins, groupby
+
+Narrow transformation : Shuffling of data will not take place
+Ex. filter, map
+
+What is shuffling..?
+-> The process of redistributing data across partitions in a Spark cluster.
+
+What is Action....?
+-> It triggers the execution of transformation
+ Ex. count(), collect() , saveAsTable()
+
+Why spark is called lazy evaluation?
+-> Unless and until the action is called transformation will not get executed .
+
+What do you mean by shuffling?
+-> Data movement among th epartitions can be termed as shuflling.
+
+I am having 3 narrow transformation and 4 side transformation. So many stages will be created ?
+-> 5 stages (4wide + narrow)
+
+What is lineage graph and DAG(Direct Acylic Graph)?
+-> 
+Lineage graph : The graph which is created before calling an action it is called as lineage graph. It takes place before the action take place.
+Direct Acylic Graph : After calling an action when the execution of the transformation will take place then dags will be crated. It takes place after the action take place.
+
+What is catalyst optimiser?
+-> It is rule based optimization engine.
+Steps :
+
+logical plan : Whenever th ejob is submitted logical plan is created.
+Physical plan : Based on logical plan one or more physical plans will be created.
+Cost based optimization : Cost of all the available physical plans is calculated and the plan with less cost is selected.
+Rule based optimization : On selected physical plan rule based optimization is done this includes operations like  column pruning , predicate pushdown, rearranging the joins. etc
+
+What is predicated pushdown?
+->Filtering the data at the source.
+
+What is column column pruning ?
+-> It means reading only required columns.
+
+What is rearranging the joins?
+->
+
+What are the types of join in spark?
+->
+inner
+left
+right
+full
+
+()
+left anti - Non matcing records from left table
+left semi - Matcing records from left table
+right anti - Non matcing records from right table
+right semi - Matcing records from left table
+
+How to call one notebook from another notebook ?
+->
+%run <notebook path>
+
+How to call one notebook from another notebook with parameters?
+->
+dbutils.notebook.run(<notebook path>,parameters as dictionary)
+
+How to access the parameters in the notebook?
+->
+dbutils.widgets.get()
+
+What is AQE ?
+-> It stands for Adaptive Query ENgine . Is is also and optimization engine.
+
+What is th edofference between AQE and Catalyst optimiser?
+->
+AQE :
+-It optimizes the query during the runtime.
+Catalyst optimiser? :
+-It optimizes the query before the runtime.
+
+
+HOW TO  ACCESS SCOPE:
+->Dbutils. secret. listScopes()
+
+HOW DO YOU CONNECT ADB TO A STORAGE ACCOUNT
+->Spark.conf.set(“fs.Azure.key.account.<storageaccname>.dfs.core.windows.net”,<key>)
+
+WHAT IS SCOPE
+->
+
+HOW TO CONNECT ADF AND ADB
+->
+
+COMMAND TO CREATE A MOUNT POINT?
+->Dbutils.fs.mount(
+Source.”wasbs://project@demostg9002.blob.corewindows.net/”,
+Mount_path:”mnt/data1”,
+Extra_configs:{“fs.azure.account.key.<storageaccname>.dfs.core.windows.net”,<key>}
+)
+Abfss://project@demostg9002.dfs.core.windows.net/
+Abfss://project@demostg9002.dfs.core.windows.net/
+
+What is the command to  create the mount point ?
+-> dbutild.fs.mount(
+source :"wasbs://project@demostg3002.blob.core.widows.net/",
+mount_path:"mnt/data",
+extra_configs :{azure_access_key})
+
+What is the difference between the abfss and wasbs?
+->
+
+What are the optimization techniques?
+->
+1.Delta table :
+-data is stored in compressed format that is snappy.parquet
+-ACID transaction :
+Automicity : either transaction should happen completely or it should not happen.
+Consistency : it refers to data inttegrity
+isolation : every transaction should be independent of eachother.
+durability :Storing it for th elong term.
+-Schema evolution :
+-time travel : for every operation a version is  created so that we can travel through that versions.
+
+2.Cache Persist :
+- Persist : 
+Storagelevel parameters
+	memory_only
+	memory_abd_disk_only
+	memory_only_ser
+	memory_and_disk_only_Ser
+	disk_only
+df.persist(StorageLevel.MEMOEY_AND_DISK_ONLY)
+cache()
+df.cache()
+
+3.Using COalesce to reduce the partition instead of reparttion :
+Coalecse :
+-Shuffiling of partitions will not take place it will simply merge the adjacent partitions.
+- Disadvantage is it can cause data skewness.
+We can overcome this iusse using:
+Salting Technique : We add random values(salts) to primary key columns and again do partitioning.
+
+Repartition :
+-It will shuffle the data first and then it will do repartitions.
+
+4.Zordering :
+-optimize table <tablename> zorder by (col1,col2...)
+
+5.Brodcast join :
+-When we have small and large dataset we use broadcast join to broadcast small to all the executors.
+- It caause an oof issue(out of memory)
+-To eovercome this issue we use brodcast variable.
+
+
+What do you mean by ACID transaction?
+->ACID transaction
+-Automicity : either transaction should happen completely or it should not happen.
+-Consistency : it refers to data inttegrity
+-isolation : every transaction should be independent of eachother.
+-durability :Storing it for th elong term.
+
+What do you mean by schema evolution??
+->
+
+What is time travel in delta table?
+->For every operation a version is  created so that we can travel through that versions.
+
+How to see the versions ?
+-> describe history <table_name>
+
+How do you time travel to a particular version?
+-> select * from <deltatable_name> @version3;
+
+What is the timestamp in deltatable?
+->
+
+How restore th eparticular version of table?
+->restore table <deltatable_name> to version as of 3.
+
+Which folder is maintaining all this versions? or Hor delta table is doing timetravel?
+-> using _delta_logs
+
+WHat _delta_logs consist of ?
+-> 
+-json (actual data)
+-crc (data intigrity)
+-checkpoint parquet(version history)
+
+What is cache and persist? and what are the uses of it
+->
+
+How to uncahce th edataframe?
+->df.unpersist()
+
+
+WHat is the difference between the coalesce and repartition?
+->
+Coalecse :
+-Shuffiling of partitions will not take place it will simply merge the adjacent partitions.
+- Disadvantage is it can cause data skewness.
+We can overcome this iusse using:
+Salting Technique : We add random values(salts) to primary key columns and again do partitioning.
+Repartition :
+-It will shuffle the data first and then it will do repartitions.
+
+
+What is data skewness? How to overcome skewness?
+-> It is the uneven distribution of the data among the partitions.
+We can overcome this iusse using:
+Salting Technique : We add random values(salts) to primary key columns and again do partitioning.
+
+
+What is ZORDERING?
+->
+Command :optimize table <tablename> zorder by (col1,col2...)
+
+What is Brodcast join?
+-> 
+-When we have small and large dataset we use broadcast join to broadcast small to all the executors.
+- It caause an oof issue(out of memory)
+-To eovercome this issue we use brodcast variable.
+
+What is the difference between the brodcast join and brodcast variable?
+->
+
+What are the internals joins of spark?
+-> 
+1.BrodcastHashJoin - it is used when one of the dataframe is small enough to fit in the memory of the executors. 
+2.SortMergeJoin - it is used when both the dataframe is large and then in this data is sorted according to condition and then it is merged
+3.ShuffleHashJoin - It is used when both the datafarmes are large in this case its hash table will be created.
+4.CartisianProduct - It is used when no condition is specified.
+5.BroadcastNestedLoopJoin - It will be either use inn case of cross join or when join condition is complex.
+
+WHat is wighets? Whar ate the uses of it?
+-> It is use to access the parameters.
+-it is use to make the dynamic.
+
+Why is is not recommended to use inferschema or what are the disadvantages of inferschema ?
+-> It is costly and time consuming
+
+Why is is not recommended to use UDF(User Defined Function)
+->
+It is executing line by line thats the reason it will take lot of time because nor the data would be compressed and nor th ejoin will be used.
+
+What is workflows? Explain it uses
+-> It is use to automate the job.
+
+How to install external libraries in spark?
+-> 
+
+How to connect to database using jdbc?
+->
+
+What is the difference between the jdbs and odbc?
+->
+
+============================================================================================================================================================================================
+PROJECT QUESTION : 
+============================================================================================================================================================================================
+
+Tell me about yourself?
+->Hi I am Vishal Waykos,microsoft certified Azure/Fabric Data Engineer
+with more than 3+ yrs of experinece in data engineering Field.Coming to my experience i am working for infosys as Senior Systems Engineer there i am working on project retal data analysis.(give small overview).Coming to my education i have did my graduation from Dr.BAMU university .Coming to my skills sets i have a good experience in azure services like azure Databricks,azure Data factory,Key Vault , ADLS gen2 and i also having good knowledge of Pyspark,SQL and Python.
+
+What is project flow?
+->
+bronje to silver :Handeling nulls , removing duplicates, typecasting(datatype casting), new requirements from the client and basic transformation.
+
+Silver to gold : WE will create views on dimension and facts table that are saved in gold and further transferred to analytics team.
+
+Ia m following madellon architecture where in bronje layer we are having raw data . From here my roles and responsibility start further i load th eraw data and perform some basich transformation and then save this result in silver zone in delta format. Further i did advance transformation and created the dimensions and facts and load the data in gold zone.
+ALso we created views on dimesnsions and facts as per business requirements which is further handover to analytics team .
+
+How to flattern the json data  ?
+-> using explode and structtype
+
+What is agile methodology ?
+-> In tthis the projet is divided into the phases.
+
+What is scrum call?
+->
+
+What is sprint? What is the duration of the your sprint?
+->
+
+WHat is story points?
+-> 
+
+How you are getting the work ?
+-> 
+
+What is agile jira?
+-> Here a ticket is given along with th edecription of the task in jira ticketing tool.
+
+What is your team size?
+->
+
+What is th efrequency of the data ?
+-> Daily
+or weekly
+hourhly?
+
+What are the sources of the data??
+->onprime or api or databse
+
+What is the source of your data?
+->
+Bronze 
+
+
+What is the size of your data?
+-> daily - 500mb
+weekly - 1gb
+
+From how many sources you are getting the data?
+->
+
+WHat is the destination of data?
+->
+
+What is your downstream and upstream od your data?
+-> downstream - bronze
+   upstream - gold
+
+Which type of data you have handel?
+-> Incrematall data , or streaming  data, history data
+
+What is command for mergeupset?(for incremental data)
+->
+merge into target t
+using source s
+on s.<primarykey> = t.<primarykey>
+when matched the update set *
+when not matched then insert*
+
+Can you write the same command in pyspark?(incrematal load)
+->
+target.alias('t').merge(source.alias('s'),s.<primarykey>==t.<primarykey>.whenMatchedUpdateAll().whenNotMatchedInsertAll().execute()
+
+How you are validating the data?
+->
+-by doing count() of data in bronze is = to silver data
+-Also by randomly taking 10 records from bronze and sliver
+-Create a dataframe of bronje and silver data
+
+How you are maintaining your data ?
+-> using audit logs
+
+What is checkpointing process in databricks?
+->
+
+Have you handel the streaming data ?
+-> No i haven't th estraming data , but i know the concepts of autoloader.
+
+What is autoloader?
+->
+
+What is leftstream and right stream and autoloader?
+->
+
+What was your compute size ?
+->
+For development : 
+For computing : 
+
+What is your spark and scala version?
+->
+
+What sre th edefault languages supported by the spark?
+-> Python , R , Sacala , Sql , java
+
+How you deploy your code ?
+-> There was a devops team for deployment.
+
+Whar where your roles and responsibilities ?
+->
+-notebook developemnt
+-pipelinedevelopment and maintaince (optional)
+-implementing logic for incremental loads
+-execute the data load
+-monitoring the data load
+-debug th dataload issue in case of failures.
+-if dataload is successful we perform unit testing on silver dataload.
+
+
+How to troubleshoot the notebook ?
+-> 
+-go to monitor tab 
+-check th epipeline which has field
+-go to a particular pipeline and check the particular activity which has failed
+-note book activity have failed
+-Check on that particular activity we will get that notebook link
+-UYsing link it will take us to th elink
+-In that in right top corner we will get a highlight error
+-click on that error it will take too the error.
+
+How to troubleshoot in fabric?
+->
+
+How to troubleshhot in airflow?
+->
+
+What is unit testing?
+->
+
+What are the challenges ?
+->
+-data load issues
+	authentication challenges
+	validation errors
+-error logs issue with troubleshooting
+-validation of unit testing
+-performance issue
+-optimising th ecode
+
+What are the transformation you have performed ?
+-> Adding columns , renaming columns , doing transformation , handling nulls , removing duplicates , joins remove columns.
+
+How you handel null values ?
+-> using fillna() in distionary format because every column is of different datatype
+fillna({'col':'NA','col2':'0'})
+or
+df.withColumn("<column_name>,when(col('colname')==",<value>.otherwise(colname).
+
+How you handel the duplicates ?
+-> 
+using distinct()
+dropDuplicates('col1','col2')
+
+df.withColumn<'columnname'>,col(<columnname>).cast(Integertype())
+
+What advance transformation you did?
+-> 
+Aggregation :
+Joins :
+
+Can you tell m eth esome of the columns?
+->
+
+
+Which type of architecture you have used ?
+-> madaleiin and lamda
+
+What type of optimization techniques you have used ?
+->
+1.delta tables
+2.Use of broadcast join
+3.While creating a dataframe selecting only specific or required columns
+4.using cache and persist
+5.Using coalesce insted of repatrtion
+
+What are th etypes of execution mode?
+->
+-client mode
+-cluster moed
+
+Is it necessary to have one driver node or more driver node?
+-> for development one is enough and for prodiction it may require more than one.
+
+WHat are th eservices you have worked?
+-> ADF , databricks, keyvault
+
+What is th edifference between the delta table and normall  table
+->
+delta table
+-offers time travel
+-forms schema
+
+Which type of triggers you have used?
+->
+
+
+What is intigrition runtime?
+->
+
+How to optimize the pioeline?
+-> Parallelism is the concept
+
+suppose in srcfolder you have different types of files so you have to copy only json file?
+-> in copy activity in that wildcard path we can mention json over there.
+
+Suppose there are 100 tables and 100 files so you have to load first file in first table and so on.?
+->
+file 1 to tabl1
+	we should used lookup using coontrol tavle after that we can use foreach activity in that we hav	
+	to use copyactivty in that used parameterized datasets to get the filesname and tableame(table name
+	we can create based on files)
+
+
+============================================================================================================================================================================================
+AZURE QUESTION : 
+============================================================================================================================================================================================
+
+What is azure data factory ?
+-> It is an orchestration toll used to automate the flow.
+
+What are the components of ADF ?
+-> Components of ADF :
+1. Pipeline : It is group of activities which performs the task.
+2. Dataset : It points to the path and retrive the data stored in the location and it also tell us about format of the data.
+3. Linked Service : It is use to store the  connection information like authentication keys, username, password.
+4. Triggers : It is used to automate the workflow or it is used to automatically run the workflow.
+5. Data Flow : Graphical user interface used for transformation.
+6. Integration Runtime : It provides compute infrastructure for data movement and transformation.
+7. Activities : It is a single activity which performs particular task.
+
+What is the difference between the liknked service and dataset?
+-> Dataset : It points to the path and retrive the data stored in the location and it also tell us about format of the data.
+   Linked Service : It is use to store the  connection information like authentication keys, username, password.
+
+What is triggers? WHat are the types of triggers?
+-> It is used to automate the workflow or it is used to automatically run the workflow.
+Types of triggers :
+-Schedule triggers : run the pipeline on a given specific time.
+-Event Based Triggers : it triggers the pipeline when an event happens.
+-Tumbling window trigger : Here we create intervals with window we define the window according to requirement.
+
+Have you ever use on tumbling window?
+-> No i haven't worked on it.
+
+What is integration run time ? WHat are th etypes of it.
+-> It provides compute infrastructure for data movement and transformation. 
+Types of Intergartion Run Time :
+-Autoresolve or Default Integration Run Time (Cloud to colud data movement)
+-Self Hosted Integration Runtime (Data movement between on prime server to cloud)
+-SQL server Integration Runtime (Migrate ssis packages from on prime to cloud)
+
+What is the difference between mapping and wrangling of data ?
+-> 
+
+Can you tell me  some of th activities that you have worked on ?
+- Lookup activity , 
+
+What is the difference between getmetadata and lookup activity ?
+->
+getmetadata : It tells the information of the file.
+lookup : It is used to read the actual information from tables and files.
+
+Are you sure tthat lookup activity is used for files also.
+-> Yes , It is used for both tables and files.
+
+In getmetadata we have option fill list where we have to give arguments ? Whar are they ?
+-> child items , item name , exists , item type, last modified
+
+What is foreach activity and what are its uses?
+-> It is use to irritate the array items.
+
+Can you use forech inside foreach activity ?
+-> No we cannot use foreach in foreach.
+
+What is script ? What is the use of this activity ?
+-> It is used for dml operation i.e data manipulation 
+
+What is th euse of copy activity ?
+-> It is use to copy the data from source to destination.
+
+What is Web activity ?
+-> It is use for the reporting via emails after any failure of the activity.
+
+What is the difference between the parameter and variable?
+->
+Parameter : In parameter we can not change the value of parameter during the runtime
+Variable :  In variable we can change the value of variable during the runtime.
+
+What is the difference between the global and pipeline parameter?
+-> 
+Global Parameter : It cann be accessed in all the available pipeline.
+Pipeline Parameter : It is the pipeline specific and can be access in that particular pipeline
+
+Can you give the usecas of global parametrs ?
+-> Url , email ,etc are global to all th epipeline
+
+Can you tell me the scenario in which you have used truncate?
+-> Here we have two pipelines i.e partial load and full load
+
+You have 100 tables and 100 files .You have to copy the data from files to their respective tables. SO how to do it ?
+-> 
+1. firstly i will create a control table with  column as filename and tablename i.e file1 and table1
+2. We will use lookup activity to do lookup into this control table and than i will iterate it using forEach activity.
+3. In forEach ativity i will use copy activity with parametrized dataset for both source and sink.
+
+What is concurrency in ADF  ?
+-> Concurrency can be defined as activity or pipeline that can be run parallely.
+ We can use concurrency in for each where batch is present
+
+Can you use if condition inside if ? if not ...but still iwant to do it how you will do it?
+-> 
+We can use two different pipeline Where we can use execute activity pipeline to run that both the pipeline
+
+Can you use forEach condition inside forEach? if not ...but still i want to do it how you will do it? Is it recommended to use this.
+-> No it not recommended becuse count of iteration increases.
+
+How to handel incremental data load using the pipeline?
+->
+using data flow
+using copy activity upsert
+ we will have checkpoint column for retracing the last run time. By using this we will We wget date and time of the last run and by using in query we will retrive the data which have arrived from greater that last checkpoint and then we will aplly upsert logic on this records.
+
+What are the types of tables in synapse ?
+-> Types of Tables :
+1.Internal or Managed Table
+-If we drop this tabele so all the data and metadata is dropped i.e we will have no data left
+ 
+2.External Table
+-it points to the data stored in location.
+-If we drop external table we will still have the data present at that location'
+-Only schema will be dropped.
+
+What are the types of SQL pool ?(synapse)
+->Types of SQL Pool :
+1.Dedicated sql pool :
+-We can create managed tables
+
+2.Serverless sql pool :
+--We can create tables

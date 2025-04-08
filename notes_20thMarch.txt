@@ -1,0 +1,102 @@
+
+1. Prepare a control in Azure sql 
+    controltable contains 
+	 tablename, incremental column, last ingestion date 
+
+2. implement adf pipeline
+
+3. In the pipeline using lookupactvity , connect to control table 
+   and get the details 
+
+4. lookupactvity output is input foreach activity
+
+5. Inside foreach activity , we have copy activity , 
+   notebook activity and stored procedure activity 
+
+6. for copy activity --> source is onprem sqlserver 
+                                      (azure sql server)
+									  
+                         sink is gen2lake
+7. after copy activity call the notebook activity 
+
+8. In the notebook activity --> call the databricks notebook 
+     Below operations will be performed inside the notebook 
+	 
+     i) create external location to connect to gen2lake 
+	 
+	 ii) Maintain the medallian architecture
+	 
+	 iii) create dataframe on raw folder and overwrite the bronze 
+	 
+	 iv) from bronze to silver we can apply the transformations
+	      
+		            1) adding new columns 
+					2) date transformations 
+					3) case codnitions
+					4) joins
+					5) window operations 
+					6) scd type 1
+					7) scd type 2 ....
+9. after notebook activity call the stored procedure activity which will update the date in the control table 
+
+-------------------------------
+
+ databricks ---> unity catalog 
+                external location 
+                
+metastore
+
+catalog 
+
+schema 
+
+tables ---> 
+
+-----------------------------
+
+				devdatabricksavdprojmarch20
+	
+
+
+
+	
+					
+raw/
+       reviews_09032025.json
+
+bronze/
+
+
+silver 
+
+
+archive 
+
+
+adbadminmar20@srinivasadf06gmail.onmicrosoft.com
+Tuno091062
+
+unitymetasotre@devstgactmarch19.dfs.core.windows.net
+
+
+hive_metastore 
+
+database 
+
+tables 
+
+
+attach unitycatalog 
+
+metastore 
+  |
+catalog 
+  |
+ schema 
+  | 
+  tables 
+  
+  devbvprojectcredential
+  devprjctcatalog
+  
+  abfss://devcontainer@devstgactmarch19.dfs.core.windows.net/devprjctcatalog

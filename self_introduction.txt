@@ -1,0 +1,119 @@
+self introduction 
+-----------------
+  <3 years  --> 
+  
+Hi , 
+This is srinivas. I have total 3 years experience as Azure Data Engineer.
+
+Here I worked Azure Services Azure datafactory , azure databricks and Microsoft Fabric.
+
+Recently I have done the project , to ingest the data from onpremises
+sqlserver to Azure Gen2lake and build deltalake.
+
+Here My roles and responsibilities build pipelines , writing notebooks
+and provide data to the reporting team.
+
+Over all I am good at Python,sql, datafactory , databrics and Fabric 
+
+
+
+>3 years --> 
+  
+   5 years --> tester 
+   
+   
+
+Hi , 
+This is srinivas. I have total 5 years experience. In this 2 years I worked in Hadoop  and then I moved to Cloud Azure and currently working as a Azure Data Engineer.
+
+Here I worked Azure Services Azure datafactory , azure databricks and Microsoft Fabric.
+
+Recently I have done the project , to ingest the data from onpremises
+sqlserver to Azure Gen2lake and build deltalake.
+
+Here My roles and responsibilities are building the pipelines , writing the 
+notebooks and provide the data to the reporting team.
+
+Over all I am good at Python,sql, datafactory , databrics and Fabric 
+
+
+Explain you recent project 
+---------------------------
+
+In our recent project we ingested data from onpremises sqlserver to Azure gen2lake and this is an incremental dataload.
+
+For this, we prepared a Control in Azure sql. 
+
+Here control table contains,
+           1) what are the tables we have to ingest 
+		   2) what are incremental columns 
+		   3) what is load type (it can incremental or full load) 
+		   4) what is the ingestinon date 
+		   
+		These we are maintaining in the control table. 
+		
+Here in our we build pipelines in Azure DataFactory to ingest the data. 
+
+Pipeline contains activities.
+
+Using lookupactivity we connecting to control table and get the records. 
+
+lookupactivity output is input to foreach activity . 
+
+Inside foreach activity we have copyactivity , notebook activity and 
+stored procedure activity. 
+
+For copy activity source is onprem sqlserver and sink is gen2lake. 
+
+Here using self hosted IR we established connection to on prem environment
+
+Using lookupactivity activity we prepared query which will execute on 
+source and result into gen2lake raw folder as parquet file format.
+
+After lookupactivity , we call the databricks notebook using notebookactivity.
+
+In databricks notebook ,using external location we connected to ADLS gen2lake.
+
+
+Here in our project we followed the medallian architecture.
+
+Here we maintained different types of zones. 
+
+Bronze 
+
+Silver 
+
+gold.
+
+Here we created dataframe on raw and added the audit columns (like loaddate)
+and overwrite the bronze zone. 
+
+From bronze to silver we applied the transformations
+        like  adding new columns 
+		      date transformatiosn 
+			  case conditions 
+			  scd type1 
+			  scd type2.
+
+And the as per the business requirement we joined multiple silver zone tables 
+and build gold zone for reporting purpose.
+
+
+Here in our project we used scheduling triggers to schedule the pipelines.
+
+
+Name :  Building Delta Lake
+
+
+Databricks : runtime : 14.5
+              spark  : 3 
+-----------------------------------------------------
+	
+
+
+ 
+ 
+
+
+
+

@@ -1,0 +1,100 @@
+Project-1
+
+Azure DataFactory 
+Azure Databricks 
+
+Project-2 
+
+Microsoft Fabric
+
+---------------------
+
+Azure Data Engineering
+
+1. Azure Storage accounts --> ADLS  --> BigData
+                       (Azure DataLake Storage)
+					   
+2. Azure DataFactory -->   Data ingestion
+
+3. Azure Databricks 
+
+4. Azure Sqlserver
+
+5. Azure Keyvault 
+
+6. Azure Logicapps 
+
+7. Azure Devops -> Repos
+
+-----------------------------
+
+Retailer Data 
+banking
+health care ...
+
+Technical design implementation
+
+
+Retailer -->  flipkart 
+              amazon
+			  Macys
+			  target
+			  walmart
+			  ....
+			  
+			
+			visa/Master  --------- ICICI
+			
+Responsibilities of Data Engineer 
+
+1. Data ingestion 
+2. Data processing
+
+
+  source system                target 
+    visa/Master                ICICI 
+	
+	 file 
+	 table 
+	 API  
+	 
+	 Project --> source system 
+	            KT session --> knowledge transfer
+				
+---------------------------------------------------
+
+
+            bazaarvoice.com              macys.com 
+					  
+	           
+   bronze
+
+   silver 
+
+   gold 
+
+
+raw data -->files ------------> bronze 
+
+ bronze to silver ---> applying transformations 
+     
+ silver to gold   ---> as per ther business requirement
+                       join multiple tables  
+
+review_stg          reviews 
+
+
+                                 bronze      to       silver 
+1. reviews ---> append 
+2. products --> scd type1                   scd type1 
+3. categories --> whole table --> overwrite 
+
+
+Types of loads 
+
+1. incremental load 
+2. Historical load 
+
+         
+              
+			
